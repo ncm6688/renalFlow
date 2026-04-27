@@ -1,4 +1,4 @@
-# RenalFlow 
+# RenalFlow
 
 Kidney health tracking + community forum.
 
@@ -27,6 +27,7 @@ RenalFlow/
 
 - **Node.js**: 18+
 - **MongoDB**: local or Atlas
+- **Elasticsearch**: for fuzzy search
 
 ### 1) Backend (`server/`)
 
@@ -41,7 +42,7 @@ ACCESS_TOKEN_SECRET=change-me
 REFRESH_TOKEN_SECRET=change-me
 ```
 
-Optional (recommended):
+
 
 ```env
 # Admin accounts (comma-separated emails). Register with one of these emails to become admin.
