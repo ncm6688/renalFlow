@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+/* Notion + Healthcare: off-white, sage, calm typography */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  /* Notion-like off-white */
+  @apply bg-[#FBFAF7] text-slate-900 antialiased;
+}
+
+::selection {
+  @apply bg-[#CFE8D5] text-slate-900;
+}
+
+/* Minimal, paper-like bloom */
+#root {
+  min-height: 100%;
+  background:
+    radial-gradient(900px 420px at 12% 0%, rgba(140, 179, 153, 0.12), transparent 60%),
+    radial-gradient(900px 420px at 88% 0%, rgba(203, 227, 210, 0.20), transparent 62%),
+    radial-gradient(700px 360px at 50% 110%, rgba(140, 179, 153, 0.10), transparent 60%);
+}
+

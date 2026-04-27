@@ -32,6 +32,9 @@ pids
 coverage/
 *.lcov
 
+# Local documentation / notes (do not commit)
+docs/
+
 # Expo
 .expo/
 .expo-shared/
