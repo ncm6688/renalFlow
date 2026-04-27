@@ -7,13 +7,22 @@ const labResultSchema = new mongoose.Schema({
       creatinine: Number,
       urea: Number,
       hemoglobin: Number,
+      rbc: Number,
+      egfr: Number,
+      potassium: Number,
       // ...
     },
     urineTest: {
       protein: String,
+      acr: Number,
       ph: Number,
       glucose: String,
       // ...
+    },
+    vitals: {
+      bloodPressureSystolic: Number,
+      bloodPressureDiastolic: Number,
+      weight: Number,
     }
   });
   

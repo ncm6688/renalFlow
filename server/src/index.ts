@@ -1,12 +1,12 @@
 import express from 'express';
-import dotenv from 'dotenv';
 import cors from 'cors';
 
 import authRoutes from './routes/auth.route';
+import labResultRoutes from "./routes/labResult.route";
+import forumRoutes from "./routes/forum.route";
 
 import {connectDB} from './lib/db';
 
-dotenv.config();
 const app = express();
 app.use(cors());
 app.use(express.json()); //use req.body
@@ -16,12 +16,10 @@ app.get('/api/health', (req, res) => {
 });
 
 app.use('/api/auth', authRoutes);
+app.use("/api/lab-results", labResultRoutes);
+app.use("/api/forum", forumRoutes);
 
 const PORT = process.env.PORT|| 4000;
-
-console.log(process.env.MONGO_URI);
-console.log(process.env.PORT);
-console.log(process.env.ACCESS_TOKEN_SECRET);
 
 const startServer = async () => {
     try {
